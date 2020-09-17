@@ -1,0 +1,103 @@
+#sticker {
+    position: fixed;
+    z-index: 1350;
+}
+
+    #sticker .content {
+        box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,50,70,.15);
+    }
+
+    #sticker.y-top {
+        top: 15px;
+    }
+
+    #sticker.x-right {
+        right: 15px;
+    }
+
+    #sticker.y-bottom {
+        bottom: 15px;
+    }
+
+    #sticker.x-left {
+        left: 15px;
+    }
+
+    #sticker.y-center.x-left,
+    #sticker.y-center.x-right {
+        top: calc(50% - 50px);
+    }
+
+    #sticker.x-center.y-top,
+    #sticker.x-center.y-bottom {
+        left: calc(50% - 50px);
+    }
+
+    #sticker.x-center.y-center {
+        top: calc(50% - 50px);
+        left: calc(50% - 50px);
+        right: unset;
+    }
+
+    #sticker .content {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: 100px;
+        padding: 10px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        color: #000;
+        background-color: #fff;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    #sticker .square-content {
+        border-radius: 19px;
+    }
+
+    #sticker .circle-content {
+        border-radius: 100%;
+    }
+
+        #sticker .circle-content::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 5px solid #fff;
+            border-radius: 100%;
+        }
+
+    #sticker .content:not(.without-tooltip)::after {
+        content: attr(title);
+        position: absolute;
+        right: calc(100% + 15px);
+        display: flex;
+        width: auto;
+        min-width: 150px;
+        padding: 8px 8px;
+        opacity: 0;
+        font-size: 14px;
+        font-weight: 400;
+        background-color: #fff;
+        box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,50,70,.15);
+        transition: all .3s ease;
+    }
+
+    #sticker:hover .content::after {
+        opacity: 1;
+    }
+
+    #sticker .sticker-close {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        cursor: pointer;
+    }

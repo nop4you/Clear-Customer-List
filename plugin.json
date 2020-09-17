@@ -1,0 +1,10 @@
+﻿{
+  "Group": "Widget",
+  "FriendlyName": "ClearCustomerList",
+  "SystemName": "Widgets.ClearCustomerList",
+  "Version": "4.30.001",
+  "SupportedVersions": [ "4.30" ],
+  "Author": "nop4you",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Widgets.ClearCustomerList.dll"
+}
